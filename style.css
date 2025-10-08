@@ -124,3 +124,80 @@ footer {
     background-color: #333;
     color: #fff;
     text-align: center;
+    padding: 20px 0;
+}
+
+/* Hamburger Menu */
+.hamburger {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.hamburger .bar {
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    margin: 4px 0;
+    transition: 0.4s;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    header .container {
+        position: relative;
+    }
+
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #fff;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .nav-menu.active {
+        display: flex;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    header nav ul li {
+        margin: 0;
+        text-align: center;
+        border-bottom: 1px solid #f4f4f4;
+    }
+
+    header nav ul li a {
+        display: block;
+        padding: 15px;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    #hero h1 {
+        font-size: 2.5em;
+    }
+
+    #hero p {
+        font-size: 1em;
+    }
+
+    .section {
+        padding: 40px 0;
+    }
+
+    #how-it-works .steps-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
